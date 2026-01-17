@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Custom Nginx App - Version 1.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .version {
+            font-size: 1.5em;
+            color: #ffd700;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .info {
+            font-size: 1.2em;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        .timestamp {
+            font-size: 0.9em;
+            color: #e0e0e0;
+            margin-top: 30px;
+            font-style: italic;
+        }
+        .badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Welcome to My Custom Nginx App</h1>
+        <div class="version">Version 1.0.0</div>
+        <div class="info">
+            <p>This is a custom Nginx application running in Docker!</p>
+            <p>Successfully deployed using Docker Registry.</p>
+        </div>
+        <div class="badges">
+            <span class="badge">Docker</span>
+            <span class="badge">Nginx</span>
+            <span class="badge">Custom HTML</span>
+        </div>
+        <div class="timestamp">
+            Deployed: <span id="timestamp"></span>
+        </div>
+    </div>
+    <script>
+        document.getElementById('timestamp').textContent = new Date().toLocaleString();
+    </script>
+</body>
+</html>
