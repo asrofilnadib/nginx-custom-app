@@ -1,5 +1,9 @@
 FROM nginx:alpine
 
+LABEL maintainer="Asrofil Nadib <asrofilnadibs28@gmail.com>"
+LABEL version="2.0.0"
+LABEL description="Custom Nginx application with Docker Registry support"
+
 # Copy custom HTML
 COPY nginx/html/ /usr/share/nginx/html/
 
